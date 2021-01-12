@@ -1,11 +1,38 @@
 # Airport Project
 
-Jared, Ubaid, Sam, Matt, Leo
+[Leo Waltmann](https://github.com/ldaijiw)
+[Jared Solano](https://github.com/jaredsparta)
+[Sam Turton] (https://github.com/samturton2)
+[Maciej Sokol](https://github.com/mattsokol79) 
+[Ubaid-ir-rehman Muhammad](https://github.com/ubaid97)
 
+## Introduction
 
-NEW CHANGE FROM NEW BRANCH
+In this project we were tasked to design a flight trip booking system for airport staff and create a user-friendly Terminal UI. We were given a list of user stories that outlined the basic requirements for the product, giving staff the ability to:
+- create a passenger with basic personal information such as a name and passport number
+- create a flight trip with a specific destination
+- assign and/or change a plane to a given flight trip
+- login to perform any necessary actions
+- add passengers to a flight trip, and sell tickets to them
+- generate a flight attendees list report to list the passengers' name and passport for a given flight trip
 
+We also added the following features as an increment after delivering the initial product:
+- Ability for passengers to log in (once their details have been added to the database) and view available flights, as well as their current flight details (if a booking has been made in their name)
+- Encryption of the login details for both staff and passengers in the database
+- Added a hierarchy of staff with 2 levels: level 1 having restricted access, and level 2 having unrestricted access to all functions
+- Ability for staff level 2 to find total profit made for a given flight trip
+- Began a front-web application to create an intuitive way to perform the methods outlined by the initial requirements.
 
+For this project we used the following tools, methods, and languages:
+- Python
+- SQL
+- AWS Relational Database Service (RDS)
+- Test Driven Development
+- HTML
+
+### Agile and Scrum
+
+As a group we decided to use the Scrum framework to implement Agile, with a focus on the continuous delivery of smaller incremental changes. Rather than planning out the entire week, we created a product backlog outlining the user stories and potential additional features as epic stories and used a scrum board on [trello](https://www.trello.com/en) to track our progress. We planned out daily sprints, starting with sprint planning meetings and ending with sprint retrospectives, which enabled us to be flexible and constantly reassess and reprioritise work if necessary.
 ## ERD
 
 ![](images/airport_project_erd_v4.png)
