@@ -7,6 +7,13 @@ Created by:
 - [Maciej Sokol](https://github.com/mattsokol79) 
 - [Ubaid-ir-rehman Muhammad](https://github.com/ubaid97)
 
+# Contents
+
+1. [Introduction](#Introduction)
+2. [Agile and Scrum](#Agile-and-Scrum)
+3. [Database](#Database)
+4. [Python Classes](#Python-Classes)
+
 ## Introduction
 
 In this project we were tasked to design a flight trip booking system for airport staff and create a user-friendly Terminal UI. We were given a list of user stories that outlined the basic requirements for the product, giving staff the ability to:
@@ -31,27 +38,17 @@ For this project we used the following tools, methods, and languages:
 - Test Driven Development
 - HTML
 
-### Agile and Scrum
+## Agile and Scrum
 
 As a group we decided to use the Scrum framework to implement Agile, with a focus on the continuous delivery of smaller incremental changes. Rather than planning out the entire week, we created a product backlog outlining the user stories and potential additional features as epic stories and used a scrum board on [trello](https://www.trello.com/en) to track our progress. We planned out daily sprints, starting with sprint planning meetings and ending with sprint retrospectives, which enabled us to be flexible and constantly reassess and reprioritise work if necessary.
 
-## ERD
+## Database
+
+### Entity Relationship Diagram
 
 ![](images/airport_project_erd_v4.png)
 
-### Git branching
-- create new branch
-```git branch <new_branch>```
-- switch to new branch
-```git checkout <new_branch>```
-- add, commit and push your changes to the repo branch
-```git push -u origin <new_branch>```
-- On github request a merge to main
-- Discuss and accept the pull request
-- Delete the old branch locally
-```git branch -d <branch_to_delete>```
-
-## PYTHON FILES
+## Python Classes
 
 **create_person.py**
 ```python
@@ -156,4 +153,16 @@ TESTING ALL ABOVE FUNCTIONS
 - We created some initial data to act as existing information inside the database. They can be found in the `data` directory above.
 - The following data on Airports were found freely on Google.
 - The different aircraft types were found on Heathrow's airport [here](https://www.heathrow.com/company/life-at-heathrow/heathrow-fan-zone/aircraft-at-heathrow).
+### Git branching
+- create new branch
+```git branch <new_branch>```
+- switch to new branch
+```git checkout <new_branch>```
+- add, commit and push your changes to the repo branch
+```git push -u origin <new_branch>```
+- On github request a merge to main
+- Discuss and accept the pull request
+- Delete the old branch locally
+```git branch -d <branch_to_delete>```
+
 
