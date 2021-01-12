@@ -1,10 +1,11 @@
 # Airport Project
 
-[Leo Waltmann](https://github.com/ldaijiw)
-[Jared Solano](https://github.com/jaredsparta)
-[Sam Turton] (https://github.com/samturton2)
-[Maciej Sokol](https://github.com/mattsokol79) 
-[Ubaid-ir-rehman Muhammad](https://github.com/ubaid97)
+Created by:
+- [Leo Waltmann](https://github.com/ldaijiw)
+- [Jared Solano](https://github.com/jaredsparta)
+- [Sam Turton](https://github.com/samturton2)
+- [Maciej Sokol](https://github.com/mattsokol79) 
+- [Ubaid-ir-rehman Muhammad](https://github.com/ubaid97)
 
 ## Introduction
 
@@ -33,6 +34,7 @@ For this project we used the following tools, methods, and languages:
 ### Agile and Scrum
 
 As a group we decided to use the Scrum framework to implement Agile, with a focus on the continuous delivery of smaller incremental changes. Rather than planning out the entire week, we created a product backlog outlining the user stories and potential additional features as epic stories and used a scrum board on [trello](https://www.trello.com/en) to track our progress. We planned out daily sprints, starting with sprint planning meetings and ending with sprint retrospectives, which enabled us to be flexible and constantly reassess and reprioritise work if necessary.
+
 ## ERD
 
 ![](images/airport_project_erd_v4.png)
