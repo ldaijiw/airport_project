@@ -7,12 +7,17 @@ Created by:
 - [Maciej Sokol](https://github.com/mattsokol79) 
 - [Ubaid-ir-rehman Muhammad](https://github.com/ubaid97)
 
+<br>
+ 
 # Contents
 
 1. [Introduction](#Introduction)
 2. [Agile and Scrum](#Agile-and-Scrum)
 3. [Database](#Database)
 4. [Python Classes](#Python-Classes)
+5. [Terminal UI](#Terminal-UI)
+
+<br>
 
 ## Introduction
 
@@ -38,15 +43,21 @@ For this project we used the following tools, methods, and languages:
 - Test Driven Development
 - HTML
 
+<br>
+
 ## Agile and Scrum
 
 As a group we decided to use the Scrum framework to implement Agile, with a focus on the continuous delivery of smaller incremental changes. Rather than planning out the entire week, we created a product backlog outlining the user stories and potential additional features as epic stories and used a scrum board on [trello](https://www.trello.com/en) to track our progress. We planned out daily sprints, starting with sprint planning meetings and ending with sprint retrospectives, which enabled us to be flexible and constantly reassess and reprioritise work if necessary.
 
+<br>
+
 ## Database
-
 ### Entity Relationship Diagram
+- Our relational database was designed to follow this diagram
 
-![](images/airport_project_erd_v4.png)
+- We use
+
+![](images/erd.png)
 
 ## Python Classes
 
@@ -151,8 +162,9 @@ TESTING ALL ABOVE FUNCTIONS
 
 **SQL Initial Data**
 - We created some initial data to act as existing information inside the database. They can be found in the `data` directory above.
-- The following data on Airports were found freely on Google.
-- The different aircraft types were found on Heathrow's airport [here](https://www.heathrow.com/company/life-at-heathrow/heathrow-fan-zone/aircraft-at-heathrow).
+
+<br>
+
 ### Git branching
 - create new branch
 ```git branch <new_branch>```
