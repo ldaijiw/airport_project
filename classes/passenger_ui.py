@@ -1,56 +1,47 @@
 import pyodbc
+from os import system, name
 import pandas as pd
 from tabulate import tabulate
+from database_connector import DBConnector
 import time
 
-class Passenger:
+def clear():
+    if name == "nt":
+        _ = system('cls')
+    else:
+        _ = system("clear")
+
+class Passenger(DBConnector):
     def __init__(self):
-
-        # Connecting to  DB
-        self.server = "ldaijiw-micro.cdix33vx1qyf.eu-west-2.rds.amazonaws.com"
-        self.database = "test_database"
-        self.username = "ldaijiw"
-        self.password = "DreamJLMSU743"
-
-        # Runs the connection method to connect to server
-        self.start_connection()
-
+        super().__init__()
         # Immediately initialise the passenger_ui
         self.passenger_ui()
 
-    def start_connection(self):
-        # Server name, DB name, username, and password are required to connect with pyodbc
-        try:
-            self.db_connection = pyodbc.connect(
-                f"DRIVER=ODBC Driver 17 for SQL Server;SERVER={self.server};DATABASE={self.database};UID={self.username};PWD={self.password}")
 
-            self.cursor = self.db_connection.cursor()
-        except (ConnectionError, pyodbc.OperationalError, pyodbc.DatabaseError):
-            return "Connection Unsuccessful"
-
-        else:
-            # print(self.cursor.execute("SELECT * FROM test_table;").fetchall())
-            return "Connection Successful"
-
-    # If user selects passenger in the loging screen, this method is run
+    # If user selects passenger in the login screen, this method is run
     def passenger_ui(self):
         print('Welcome to London Heathrow Airport!')
         while True:
+            clear()
             print("""
-            
             AVAILABLE OPTIONS
             
             1. View your Ticket Details
             2. View current flights
-            3. Exit
-            
+            3. Logout
+            TYPE <X> TO EXIT
             """)
-            user_input = input("What would you like to do?\n -> ").strip()
-            if user_input not in ['1', '2', '3']:
+            user_input = input("What would you like to do?\n -> ").strip().upper()
+            if user_input not in ['1', '2', '3', 'X']:
                 continue
+
+            if user_input == "X":
+                clear()
+                exit()
 
             # If passenger wants to see their ticket details, ask for ticket id and outputs the ticket info
             if user_input == '1':
+                clear()
                 user_ticket_id = int(input("What is your Ticket ID?\n -> "))
                 your_ticket_query = f"""
                 SELECT
@@ -60,7 +51,8 @@ class Passenger:
                     FlightTrip.ArrivalAirport,
                     Airports.AirportCountry,
                     FlightTrip.DepartureTime,
-                    FlightTrip.TicketPrice
+                    FlightTrip.TicketPrice,
+                    TicketDetails.PricePaid
                 FROM TicketDetails
                 INNER JOIN Passengers ON TicketDetails.Passenger_id = Passengers.Passenger_id
                 INNER JOIN FlightTrip ON TicketDetails.FlightTrip_id = FlightTrip.FlightTrip_id
@@ -76,13 +68,13 @@ class Passenger:
                 print('You ticket details:')
                 print('=' * 30)
 
-                print(tabulate(df1, headers = [' ', 'Ticket ID', 'Name', 'Flight Trip ID', 'Arrival Airport', 'Country', 'Departure Date & Time', 'Ticket Price (£)'], tablefmt='psql'))
-                time.sleep(10)
-                print(' ')
-
+                print(tabulate(df1, headers = [' ', 'Ticket ID', 'Name', 'Flight Trip ID', 'Arrival Airport', 'Country', 'Departure Date & Time', 'Ticket Price (£)', 'Total Paid (£)'], tablefmt='psql'))
+                input("\nPress <ENTER> to continue")
+                continue
 
             # If passenger wants to see current flights, run this method
             if user_input == '2':
+                clear()
                 current_flights_query = """
                 SELECT 
                     FlightTrip.DepartureTime,
@@ -103,13 +95,15 @@ class Passenger:
                 print('=' * 30)
 
                 print(tabulate(df2, headers = ['', 'Departure Date & Time', 'Flight Trip ID', 'Arrival Airport', 'Country'], tablefmt = 'psql'))
-                time.sleep(10)
-                print(' ')
+                input("\nPress <ENTER> to continue")
+                continue
 
 
             if user_input == '3':
+                clear()
                 print("Thank you for using the London Heathrow Airport Terminal!")
-                break
+                return "RETURNED LOGOUT"
+
 
 
 # # To run the class
