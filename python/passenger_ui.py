@@ -105,12 +105,5 @@ class Passenger(DBConnector):
                 return "RETURNED LOGOUT"
 
 
-
-# # To run the class
-# def main():
-#
-#     test = Passenger()
-#
-#
-# if __name__ == '__main__':
-#      main()
+if __name__ == "__main__":
+    pass

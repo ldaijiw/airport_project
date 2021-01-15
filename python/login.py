@@ -51,7 +51,6 @@ class LogIn(DBConnector):
                 self.log_in()
                 
 
-
     def log_in(self):
         i = 0
         crypto = Cryptic() # Create object of class
@@ -96,7 +95,6 @@ class LogIn(DBConnector):
                     return LogIn()
                 login_details = list(login_details)
                 login_details.append(0)
-
 
             if input_password != database_password:
                 print("\nPassword Incorrect\n")
@@ -159,4 +157,4 @@ class LogIn(DBConnector):
 
 
 if __name__ == '__main__':
-    LogIn()
+    pass

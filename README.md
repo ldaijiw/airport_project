@@ -101,7 +101,7 @@ We also implemented the following alongside these:
 - The terminal UI represented a way for staff and passengers at the airport to be able to do what they needed to do, as outlined previously in the `Introduction`
 
 - We created four main classes for the UI:
-    1. `LogIn` found in `classes/main.py` was the base class, which would be the first page of the UI
+    1. `LogIn` found in `classes/login.py` was the base class, which would be the first page of the UI
     2. `Passenger` found in `classes/passenger_ui.py` handles all the options for passengers
     3. `StaffUI_1` found in `classes/staff_ui.py` handled all the options for staff level 1
     4. `StaffUI_2` found in `classes/staff_ui.py` handled all the options for staff level 2
