@@ -1,8 +1,4 @@
--- What's new?
--- Added Gender to Passengers and Staff
--- Removed some NOT NULL restrictions in the FlightTrip table
-        -- We can create flights without requiring an Aircraft_id and availableseats
-
+-- This file lists all the main commands one would need to use regarding SQL
 CREATE DATABASE Airport;
 USE Airport;
 

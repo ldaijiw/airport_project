@@ -14,8 +14,7 @@ Created by:
 1. [Introduction](#Introduction)
 2. [Agile and Scrum](#Agile-and-Scrum)
 3. [Database](#Database)
-4. [Python Classes](#Python-Classes)
-5. [Terminal UI](#Terminal-UI)
+4. [Terminal UI with Python](#Terminal-UI-with-Python)
 
 <br>
 
@@ -38,14 +37,17 @@ We also added the following features as an increment after delivering the initia
 
 <br>
 
-### Tools
+### Tech Stack and methodologies
 
-For this project we used the following tools, methods, and languages:
+For this project we used the following tech stack:
 - Python
+- Python Flask
 - SQL
-- AWS Relational Database Service (RDS)
-- Test Driven Development
 - HTML
+
+We also implemented the following alongside these:
+- Test Driven Development
+- AWS Relational Database Service (RDS)
 
 <br>
 
@@ -64,12 +66,20 @@ For this project we used the following tools, methods, and languages:
 ## Database
 
 - A main point of the project was to design a database in which the Airport would store their data
+    - This is of course a very important aspect of any service
+
+### Where was the data stored?
+- To ensure each of us were working with the same data at all times, we made use of the RDS service found on AWS
+
+- We set up a SQL database on the cloud and we would connect to it via `pyodbc` or `Azure Data Studio`
+    - This gave us an easy way to collaborate with one another and test code more efficiently 
 
 ### Entity Relationship Diagram
 
 - We used ERD diagrams to help us in the designing of the database
     - Using diagrams, each of us would have a very clear vision of how our app would connect to our database, thus reducing bugs and errors
     - It allowed us to create optimal SQL scripts to ensure the database was seeded how we wanted it to be
+    - Do look through `images/` to see how our ERD diagram evolved as more discussion and thought was put into it 
 
 ![](images/erd.png)
 
@@ -77,30 +87,38 @@ For this project we used the following tools, methods, and languages:
 - Testing the app required the database to be seeded as without any data, queries could not be made
 
 - We made use of a random data generator called [mockaroo](https://www.mockaroo.com/)
-    - The SQL files with mock data can be found in `data` 
-<br>
-
-## Python Classes
-- We implemented OOP as our main programming paradigm, allowing us to very easily implement DRY and build atop already existing code
+    - The SQL files holding the mock data can be found in `/SQL`
+    - Inside, there are files with SQL DDL and DML statements for use in software like `Azure Data Studio`
+    - There are also Python files that populate the databse, using `pyodbc` 
 
 <br>
 
-### Git branching
-- create new branch
-```git branch <new_branch>```
-- switch to new branch
-```git checkout <new_branch>```
-- add, commit and push your changes to the repo branch
-```git push -u origin <new_branch>```
-- On github request a merge to main
-- Discuss and accept the pull request
-- Delete the old branch locally
-```git branch -d <branch_to_delete>```
+## Terminal UI with Python
+- We implemented OOP when creating the terminal UI
+    - This enabled us to implement the DRY principal more effectively
+    - It also allowed us to efficiently build atop previously written code
 
-<br>
-
-## Terminal UI
 - The terminal UI represented a way for staff and passengers at the airport to be able to do what they needed to do, as outlined previously in the `Introduction`
 
-- We created three separate classes to outline the different possibilities:
-    1. A base class called 
+- We created four main classes for the UI:
+    1. `LogIn` found in `classes/main.py` was the base class, which would be the first page of the UI
+    2. `Passenger` found in `classes/passenger_ui.py` handles all the options for passengers
+    3. `StaffUI_1` found in `classes/staff_ui.py` handled all the options for staff level 1
+    4. `StaffUI_2` found in `classes/staff_ui.py` handled all the options for staff level 2
+
+### Git
+- Git was used as our Version Control System
+
+- Our main methodology when working as a team using Git was:
+    1. Create new branches when working on a new feature
+    ```git branch <new_branch>```
+    2. Switch to that branch whenever you were making changes to that feature
+    ```git checkout <new_branch>```
+    3. Add, commit and push your changes on that branch to GitHub
+    ```git push -u origin <new_branch>```
+    4. On GitHub, create a pull request for others to look at
+    5. Discuss and accept the pull request if safe to do so
+    6. Delete the old branch locally
+    ```git branch -d <branch_to_delete>```
+
+<br>

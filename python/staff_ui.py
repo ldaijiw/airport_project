@@ -692,7 +692,5 @@ class StaffUI_2(DBConnector, BookingManager, FlightTripManager):
         self.print_flight_attendees_list(tup)
         input("\nPress <ENTER> to continue")
 
-
-
 if __name__ == "__main__":
     f = StaffUI_2()
