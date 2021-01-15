@@ -59,6 +59,7 @@ We also implemented the following alongside these:
     - We planned out daily sprints, starting with sprint planning meetings and ending with sprint retrospectives, which enabled us to be flexible and constantly reassess and reprioritise work as required
 
 - Here was our Trello board, pictured after the completion of the project:
+
     ![](images/trello.jpg)
 
 <br>
@@ -66,7 +67,6 @@ We also implemented the following alongside these:
 ## Database
 
 - A main point of the project was to design a database in which the Airport would store their data
-    - This is of course a very important aspect of any service
 
 ### Where was the data stored?
 - To ensure each of us were working with the same data at all times, we made use of the RDS service found on AWS
@@ -79,17 +79,17 @@ We also implemented the following alongside these:
 - We used ERD diagrams to help us in the designing of the database
     - Using diagrams, each of us would have a very clear vision of how our app would connect to our database, thus reducing bugs and errors
     - It allowed us to create optimal SQL scripts to ensure the database was seeded how we wanted it to be
-    - Do look through `images/` to see how our ERD diagram evolved as more discussion and thought was put into it 
+    - Do look through `images/` to see how our ERD diagram evolved as more discussion and thought was put into it. There were several designs before we landed on the one shown here
 
 ![](images/erd.png)
 
 ### Seeding the database
-- Testing the app required the database to be seeded as without any data, queries could not be made
+- To test properly, we needed data that was already present in the database. Hence we created SQL files to seed the database for use
 
 - We made use of a random data generator called [mockaroo](https://www.mockaroo.com/)
-    - The SQL files holding the mock data can be found in `/SQL`
+    - The SQL files holding the mock data can be found in `SQL/`
     - Inside, there are files with SQL DDL and DML statements for use in software like `Azure Data Studio`
-    - There are also Python files that populate the databse, using `pyodbc` 
+    - There are also Python files that populate the database using `pyodbc` 
 
 <br>
 

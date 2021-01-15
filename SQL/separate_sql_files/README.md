@@ -1,1 +1,0 @@
-### This folder keeps SQL files to populate a specific table in the database
