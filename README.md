@@ -81,7 +81,7 @@ We also implemented the following alongside these:
     - It allowed us to create optimal SQL scripts to ensure the database was seeded how we wanted it to be
     - Do look through `images/` to see how our ERD diagram evolved as more discussion and thought was put into it. There were several designs before we landed on the one shown here
 
-![](images/erd.png)
+![](images/erd-final.png)
 
 ### Seeding the database
 - To test properly, we needed data that was already present in the database. Hence we created SQL files to seed the database for use
